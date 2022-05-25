@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Today's Date</title>
+
+</head>
+ 
+<body>
+ <script>
+      //let d = new Date();
+     // document.body.innerHTML = "<h1>Today's date is " + d + "</h1>"
+     // let name = prompt("What is your name?");
+     // alert("Hello, " + name + "!");
+      // An example function
+      //let number = prompt("what is the length of the cube?");
+     // alert(cube);
+
+//function functionName() {}
+
+// Initialize a function to calculate the volume of a cube
+//function cube(number) {
+	//return Math.pow(number, 3);
+//}
+
+// Invoke the function
+//cube();
+//console.log("Hello, World");
+
+
+var choices = ["rock", "paper", "scissors"];
+let computerPlay = choices[Math.floor(Math.random() * choices.length)];
+//console.log(computerPlay);
+
+function playRound(playerSelection, computerSelection) {
+  
+  if (
+    (playerSelection === "rock" && computerSelection === "scissors") ||
+    (playerSelection === "scissors" && computerSelection === "paper") ||
+    (playerSelection === "paper" && computerSelection === "rock")
+  ) {
+    return "Player Wins!";
+  } else if (
+    (playerSelection === "rock" && computerSelection == "paper") ||
+    (playerSelection === "paper" && computerSelection === "scissors") ||
+    (playerSelection === "scissors" && computerSelection === "rock")
+  ) {
+    return "Computer Wins!";
+  } else {
+    return "Tie";
+  }
+function game() {
+ playRound();
+ for (let i = 0; i < 5; i++) {
+  console.log(i);
+ }
+  
+}
+}
+playerSelection = "rock";
+const computerSelection = computerPlay;
+
+console.log(playRound(playerSelection, computerPlay));
+
+
+ 
+  
+  </script>
+ 
+</body>
+ 
+</html>
