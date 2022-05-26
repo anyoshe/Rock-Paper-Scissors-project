@@ -10,6 +10,12 @@
  
 <body>
  <script>
+ //playerSelection = prompt("lets play rock paper scissors"); //define player, player input
+//let player = playerSelection.toLowerCase(); //convert user input to lowercase *old
+//console.log ("you choose " +playerSelection.toLowerCase()); //show user input in lowercase
+//if (playerSelection === rock || scissors || paper) {
+//prompt("wrong choice!");
+//}
       //let d = new Date();
      // document.body.innerHTML = "<h1>Today's date is " + d + "</h1>"
      // let name = prompt("What is your name?");
@@ -31,24 +37,13 @@
 
                 // ignore the above 
 
-var counter = 1;
+var i = 1;
 var choices = ["rock", "paper", "scissors"];
 let computerPlay = choices[Math.floor(Math.random() * choices.length)];
 //console.log(computerPlay);
 
 function playRound(playerSelection, computerSelection) {
-//playerSelection = prompt("lets play rock paper scissors"); //define player, player input
-//let player = playerSelection.toLowerCase(); //convert user input to lowercase *old
-//console.log ("you choose " +playerSelection.toLowerCase()); //show user input in lowercase
-//if (playerSelection === rock || scissors || paper) {
-//prompt("wrong choice!");
-//}
-     const game = () => playRound(playerSelection, computerSelection);
-     for (let i = 1; i <= counter; i++) {
-           if (i < 6) {
-               counter++ ;
-         }
-        }
+
   if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "paper") ||
@@ -62,17 +57,22 @@ function playRound(playerSelection, computerSelection) {
   ) {
     return "Computer Wins!";
   } else {
+   
     return "Tie";
   }
  }
 playerSelection = "rock";
 const computerSelection = computerPlay;
-//console.log(playRound(playerSelection, computerSelection));
-console.log(counter);
+console.log(playRound(playerSelection, computerSelection));
+function game(playerSelection, computerSelection) { 
+  playRound(playerSelection, computerSelection);
+   for(i = 1; i < 6; i++);
+    if(i < 6);
+     i++;
+  }
 
 
-//game();
-
+console.log(game(playerSelection, computerSelection));
 
   </script>
  
